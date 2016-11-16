@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Leon.Nie">
-    <title>First Post - Leon.Nie</title>
+    <title>Tag: Python - Leon.Nie</title>
     <meta name="author" content="Leon.Nie">
     
     
@@ -15,16 +15,12 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="This is the test post!">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="First Post">
-<meta property="og:url" content="leonnie.today/2016/11/11/First-Post/index.html">
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Leon.Nie">
+<meta property="og:url" content="leonnie.today/tags/Python/index.html">
 <meta property="og:site_name" content="Leon.Nie">
-<meta property="og:description" content="This is the test post!">
-<meta property="og:updated_time" content="2016-11-11T08:34:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First Post">
-<meta name="twitter:description" content="This is the test post!">
+<meta name="twitter:title" content="Leon.Nie">
     
     
         
@@ -191,95 +187,75 @@
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            First Post
-        </h1>
-    
-    <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-11-11T16:33:44+08:00">
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/03/23/ipython/">
+                            ipython
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-03-23T19:35:42+08:00">
 	
-		    11 11月 2016
+		    23 3月 2016
     	
     </time>
     
-</div>
+        <span>dans </span>
+        
+    <a class="category-link" href="/categories/Python/">Python</a>
 
-</div>
+
     
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>This is the test post!</p>
+</div>
 
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>ipython 是一个 python 的交互式 shell，比默认的python shell 好用得多，支持变量自动补全，自动缩进，支持 bash shell 命令，内置了许多很有用的功能和函数。</p>
+<p>具体的介绍和安装可以查看ipython的<em><a href="http://ipython.org/index.html" target="_blank" rel="external">官方文档</a></em>。</p>
+<p>这里只记录一下一些基本常用功能。（后期不断跟进）</p>
+<h4 id="Tab自动完成："><a href="#Tab自动完成：" class="headerlink" title="Tab自动完成："></a><strong>Tab自动完成：</strong></h4><p>在Python shell中，实现自动完成，需要在编译时增加readline支持特性</p>
+<p><pre lang="python" line="1" escaped="true">&gt;&gt;&gt; import rlcompleter, readline<br>&gt;&gt;&gt; readline.parse_and_bind(‘tab:complete’)</pre><br>这样，我们就可以使用TAB来完成自动补全功能。按一次TAB自动完成匹配，或者两次TAB列出所有可能的匹配列表。</p>
+<p>在ipython中，该功能是默认开启的，更有意思的是，ipython还能帮助我们找到需要载入的模块</p>
+<p><pre lang="python" line="1" escaped="true">In [1]: import o&lt;TAB&gt;<br>opcode operator optparse os os2emxpath ossaudiodev<br>In [1]: import xm&lt;TAB&gt;<br>xml xmllib xmlrpclib<br></pre><br>同时，使用TAB还能列出模块的所有方法和属性</p>
+<p><img src="http://ec2-52-200-51-77.compute-1.amazonaws.com/blogwp-content/uploads/2016/03/ipython.png" alt="ipython"></p>
+<h4 id="帮助："><a href="#帮助：" class="headerlink" title="帮助："></a><strong>帮助：</strong></h4><p>在ipython中，在命令最后加上？,便能够输出帮助信息</p>
+<p><img src="http://ec2-52-200-51-77.compute-1.amazonaws.com/blogwp-content/uploads/2016/03/微信截图_20160323202416.png" alt="微信截图_20160323202416"></p>
+<p>好了，先暂时写到这里吧。通过这篇文章，同时熟悉了一些wordpress博文的编辑方式。</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/03/23/ipython/#post-footer" class="postShorten-excerpt_link link">
+                                Commenter et partager
+                            </a>
+                        </p>
+                    
+                </div>
             
         </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
         
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--disabled">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/11/hello-world/" data-tooltip="Hello World">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
         
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        
+        <li class="pagination-number">page sur</li>
     </ul>
 </div>
 
-
-        
-            
-        
-    </div>
-</article>
-
+</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -289,84 +265,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--disabled">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PRÉCÉDENT</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/11/hello-world/" data-tooltip="Hello World">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">SUIVANT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-google-plus"></i><span>Partager sur Google Plus</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-facebook-official"></i><span>Partager sur Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=leonnie.today/2016/11/11/First-Post/">
-                <i class="fa fa-twitter"></i><span>Partager sur Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-
             
         </div>
         
@@ -595,8 +493,6 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
-
-    
 
 
 
