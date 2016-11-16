@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Leon.Nie">
-    <title>Category: Technology - Leon.Nie</title>
+    <title>Categoría: Technology - Leon.Nie</title>
     <meta name="author" content="Leon.Nie">
     
     
@@ -60,7 +60,7 @@
                 href="#about">
         
         
-            <img class="header-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
+            <img class="header-picture" src="/assets/images/author.jpeg" alt="Foto de autor"/>
         
         </a>
     
@@ -78,7 +78,7 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/author.jpeg" alt="Foto de autor"/>
                 </a>
                 <h4 class="sidebar-profile-name">Leon.Nie</h4>
                 
@@ -98,7 +98,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                        <span class="sidebar-button-desc">Home</span>
+                        <span class="sidebar-button-desc">Inicio</span>
                     </a>
             </li>
             
@@ -110,7 +110,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">Categories</span>
+                        <span class="sidebar-button-desc">Categorías</span>
                     </a>
             </li>
             
@@ -122,7 +122,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                        <span class="sidebar-button-desc">Tags</span>
+                        <span class="sidebar-button-desc">Etiquetas</span>
                     </a>
             </li>
             
@@ -134,7 +134,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">Archives</span>
+                        <span class="sidebar-button-desc">Archivos</span>
                     </a>
             </li>
             
@@ -190,7 +190,7 @@
     <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -204,11 +204,11 @@
                 <div class="postShorten-meta">
     <time itemprop="datePublished" datetime="2016-04-29T15:49:03+08:00">
 	
-		    4月 29, 2016
+		    29 4月 2016
     	
     </time>
     
-        <span>in </span>
+        <span>en </span>
         
     <a class="category-link" href="/categories/Technology/">Technology</a>
 
@@ -218,57 +218,13 @@
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>最近在学习Android编程，看的是郭大神的《第一行代码》。</p>
-<p>Android系统的四大组件：活动（Activity） 、服务（Service） 、广播接收器（Broadcast Receiver）和内容提供器（Content Provider）。</p>
-<p>在活动生命周期这部分，概念有点多，所以整理了记下来。</p>
-<p>首先是活动Activity是可以层叠的，一个新启动的活动是可以覆盖在旧的活动上面的。当用户点击BACK键销毁当前页面的活动时，下面的活动就会显示出来。这种管理方式其实就是通过<span style="text-decoration: underline;">栈</span>来实现的。</p>
-<p>活动主要有四种状态：</p>
-<p><strong>运行状态：</strong>处于栈顶时刻的状态。</p>
-<p><strong>暂停状态：</strong>虽然在这个状态下，该活动并没有处于栈顶。但是对于用户界面来说，这个活动仍然是可见的。比如对话框形式的活动，并没有占满整个屏幕，只是占据了屏幕的一部分。在对话框下面的活动此时虽然没有处于栈顶的状态，但是对用户仍然是可见的。这就是处于暂停状态。</p>
-<p><strong>停止状态**</strong>：**在停止状态下，活动不仅没有处于栈顶，而且也是不可见的。</p>
-<p><strong>销毁状态</strong>：顾名思义，这个活动在活动栈中已经被移出。</p>
-<p>Activity中的七个回调方法:</p>
-<ul>
-<li><p>onCreate()<br>活动初始化的时候调用。初始化操作比如加载活动的布局和绑定组件的活动。</p>
-</li>
-<li><p>onStart()<br>活动又不可见到可见的时候调用。</p>
-</li>
-<li><p>onResume()<br>活动处于栈顶且正在运行状态的时候，已经准备好了和用户进行交互的时候调用。</p>
-</li>
-<li><p>onPause()<br>系统准备启动或者恢复另一个活动的时候调用。</p>
-</li>
-<li><p>onStop()<br>使活动完全不可见的时候调用。与onPause()不同之处在于：比如此刻需要启动一个对话框形式的活动，将调用onPause而不是onStop，因为当前活动在对话框活动启用后仍然是可见的。</p>
-</li>
-<li><p>onDestroy()<br>销毁活动时调用</p>
-</li>
-<li><p>onRestart()<br>使处于停止状态的活动变为运行状态的时候调用。</p>
-</li>
-</ul>
-<p>所以完整的活动生存周期是处于onCreate()和onDestroy()之间的。</p>
-<p>可见生存周期是处于onStart()和onStop()之间。</p>
-<p>前台生存周期是在onResume()和onPause()之间。</p>
-<p>这个时候要注意区别可见周期和前台周期。可见并不代表前台，还是拿对话框活动来说，对话框活动启动时，处于前台，而之前的活动又前台变为可见。所以启动对话框时，之前的活动要执行onPause()，关闭对话框时，这个活动执行onResume().</p>
-<p>示例：</p>
-<p>按照《第一行代码》中关于活动生命周期这部分的代码实例来说明：</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/1.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/1-300x196.png" alt="活动onCreate()"></a></p>
-<p>此时，打开主界面，也就是主活动，通过日志我们看到，主活动依次调用了onCreate() -&gt; onStart() -&gt; onResume()。此时主活动经历了初始化，又不可见到可见，准备好与用户进行交互的3个过程。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/2.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/2-300x197.png" alt="2"></a></p>
-<p>接着，我们点击startNormalActivity按钮，启动另一个普通的活动。NormalActivtiy覆盖了之前的主活动，主活动首先执行了onPause()，系统准备去启动NormalActivity，然后主活动变为不可见，调用了onStop()。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/3.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/3-300x197.png" alt="3"></a></p>
-<p>接着，我们点击back返回主活动，主活动由之前的停止状态进入运行状态，调用onRestart()，然后调用onStart()，进入可见状态，最后onResume()与用户实现交互。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/4.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/4-300x196.png" alt="4"></a></p>
-<p>点击start dialogactivity启动对话框活动，主活动调用onPause()，并没有调用onStop()，因为此时主活动仍然可见。点击back返回主活动时调用onResume()。</p>
-
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>最近在学习Android编程，看的是郭大神的《第一行代码》。
                     
+                        <a href="/2016/04/29/android-e4-b8-ad-e7-9a-84-e6-b4-bb-e5-8a-a8-e7-94-9f-e5-91-bd-e5-91-a8-e6-9c-9f/" class="postShorten-excerpt_link link">
+                            Seguir leyendo
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2016/04/29/android-e4-b8-ad-e7-9a-84-e6-b4-bb-e5-8a-a8-e7-94-9f-e5-91-bd-e5-91-a8-e6-9c-9f/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
                     
                 </div>
             
@@ -280,7 +236,7 @@
     <ul class="pagination">
         
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="pagination-number">página 1 de 1</li>
     </ul>
 </div>
 
@@ -310,7 +266,7 @@
             <i class="fa fa-remove"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
+            <img id="about-card-picture" src="/assets/images/author.jpeg" alt="Foto de autor"/>
         
             <h4 id="about-card-name">Leon.Nie</h4>
         
@@ -351,7 +307,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="no-result text-color-light text-center">no se encontraron artículos</div>
             <div class="results">
                 
                 <div class="media">
@@ -443,7 +399,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><p>最近在学习Android编程，看的是郭大神的《第一行代码》。</div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -491,10 +447,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="no post found"
-                data-message-one="1 post found"
-                data-message-other="{n} posts found">
-                7 posts found
+                data-message-zero="no se encontraron artículos"
+                data-message-one="1 artículo encontrado"
+                data-message-other="{n} artículos encontrados">
+                7 artículos encontrados
             </p>
         </div>
     </div>
