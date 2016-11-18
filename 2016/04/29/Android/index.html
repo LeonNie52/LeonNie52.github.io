@@ -21,15 +21,10 @@
 <meta property="og:url" content="leonnie.today/2016/04/29/Android/index.html">
 <meta property="og:site_name" content="Leon.Nie">
 <meta property="og:description" content="最近在学习Android编程，看的是郭大神的《第一行代码》。">
-<meta property="og:image" content="http://localhost/blog/wp-content/uploads/2016/04/1-300x196.png">
-<meta property="og:image" content="http://localhost/blog/wp-content/uploads/2016/04/2-300x197.png">
-<meta property="og:image" content="http://localhost/blog/wp-content/uploads/2016/04/3-300x197.png">
-<meta property="og:image" content="http://localhost/blog/wp-content/uploads/2016/04/4-300x196.png">
-<meta property="og:updated_time" content="2016-11-16T15:29:51.000Z">
+<meta property="og:updated_time" content="2016-11-18T11:10:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android中的活动生命周期">
 <meta name="twitter:description" content="最近在学习Android编程，看的是郭大神的《第一行代码》。">
-<meta name="twitter:image" content="http://localhost/blog/wp-content/uploads/2016/04/1-300x196.png">
     
     
         
@@ -69,7 +64,7 @@
                 href="#about">
         
         
-            <img class="header-picture" src="/assets/images/author.jpeg" alt="Foto do autor"/>
+            <img class="header-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
         
         </a>
     
@@ -87,7 +82,7 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/author.jpeg" alt="Foto do autor"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
                 </a>
                 <h4 class="sidebar-profile-name">Leon.Nie</h4>
                 
@@ -107,7 +102,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                        <span class="sidebar-button-desc">Início</span>
+                        <span class="sidebar-button-desc">Home</span>
                     </a>
             </li>
             
@@ -119,7 +114,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">Categorias</span>
+                        <span class="sidebar-button-desc">Categories</span>
                     </a>
             </li>
             
@@ -143,7 +138,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">Arquivo</span>
+                        <span class="sidebar-button-desc">Archives</span>
                     </a>
             </li>
             
@@ -208,11 +203,11 @@
     <div class="post-meta">
     <time itemprop="datePublished" datetime="2016-04-29T15:49:03+08:00">
 	
-		    29/04/2016
+		    4月 29, 2016
     	
     </time>
     
-        <span>em </span>
+        <span>in </span>
         
     <a class="category-link" href="/categories/Technology/">Technology</a>
 
@@ -237,33 +232,29 @@
 <ul>
 <li><p>onCreate()<br>活动初始化的时候调用。初始化操作比如加载活动的布局和绑定组件的活动。</p>
 </li>
-<li><p>onStart()<br>活动又不可见到可见的时候调用。</p>
-</li>
-<li><p>onResume()<br>活动处于栈顶且正在运行状态的时候，已经准备好了和用户进行交互的时候调用。</p>
-</li>
-<li><p>onPause()<br>系统准备启动或者恢复另一个活动的时候调用。</p>
-</li>
-<li><p>onStop()<br>使活动完全不可见的时候调用。与onPause()不同之处在于：比如此刻需要启动一个对话框形式的活动，将调用onPause而不是onStop，因为当前活动在对话框活动启用后仍然是可见的。</p>
-</li>
-<li><p>onDestroy()<br>销毁活动时调用</p>
-</li>
-<li><p>onRestart()<br>使处于停止状态的活动变为运行状态的时候调用。</p>
-</li>
+<li><p>onStart()</p>
+<pre><code>活动又不可见到可见的时候调用。
+</code></pre></li>
+<li><p>onResume()</p>
+<pre><code>活动处于栈顶且正在运行状态的时候，已经准备好了和用户进行交互的时候调用。
+</code></pre></li>
+<li><p>onPause()</p>
+<pre><code>系统准备启动或者恢复另一个活动的时候调用。
+</code></pre></li>
+<li><p>onStop()</p>
+<pre><code>使活动完全不可见的时候调用。与onPause()不同之处在于：比如此刻需要启动一个对话框形式的活动，将调用onPause而不是onStop，因为当前活动在对话框活动启用后仍然是可见的。
+</code></pre></li>
+<li><p>onDestroy()</p>
+<pre><code>销毁活动时调用
+</code></pre></li>
+<li><p>onRestart()</p>
+<pre><code>使处于停止状态的活动变为运行状态的时候调用。
+</code></pre></li>
 </ul>
 <p>所以完整的活动生存周期是处于onCreate()和onDestroy()之间的。</p>
 <p>可见生存周期是处于onStart()和onStop()之间。</p>
 <p>前台生存周期是在onResume()和onPause()之间。</p>
 <p>这个时候要注意区别可见周期和前台周期。可见并不代表前台，还是拿对话框活动来说，对话框活动启动时，处于前台，而之前的活动又前台变为可见。所以启动对话框时，之前的活动要执行onPause()，关闭对话框时，这个活动执行onResume().</p>
-<p>示例：</p>
-<p>按照《第一行代码》中关于活动生命周期这部分的代码实例来说明：</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/1.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/1-300x196.png" alt="活动onCreate()"></a></p>
-<p>此时，打开主界面，也就是主活动，通过日志我们看到，主活动依次调用了onCreate() -&gt; onStart() -&gt; onResume()。此时主活动经历了初始化，又不可见到可见，准备好与用户进行交互的3个过程。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/2.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/2-300x197.png" alt="2"></a></p>
-<p>接着，我们点击startNormalActivity按钮，启动另一个普通的活动。NormalActivtiy覆盖了之前的主活动，主活动首先执行了onPause()，系统准备去启动NormalActivity，然后主活动变为不可见，调用了onStop()。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/3.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/3-300x197.png" alt="3"></a></p>
-<p>接着，我们点击back返回主活动，主活动由之前的停止状态进入运行状态，调用onRestart()，然后调用onStart()，进入可见状态，最后onResume()与用户实现交互。</p>
-<p><a href="http://localhost/blog/wp-content/uploads/2016/04/4.png" target="_blank" rel="external"><img src="http://localhost/blog/wp-content/uploads/2016/04/4-300x196.png" alt="4"></a></p>
-<p>点击start dialogactivity启动对话框活动，主活动调用onPause()，并没有调用onStop()，因为此时主活动仍然可见。点击back返回主活动时调用onResume()。</p>
 
             
         </div>
@@ -271,7 +262,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">ETIQUETADO em</span><br/>
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/Android/">Android</a>
 
@@ -285,14 +276,14 @@
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/07/寂寞是最好的增值期/"  data-tooltip="寂寞是最好的增值期[转]">
                 
                     <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2016/04/22/关于域名/" data-tooltip="关于域名和子目录那点儿事">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
             </li>
@@ -356,14 +347,14 @@
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/07/寂寞是最好的增值期/"  data-tooltip="寂寞是最好的增值期[转]">
                 
                     <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2016/04/22/关于域名/" data-tooltip="关于域名和子目录那点儿事">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
             </li>
@@ -407,17 +398,17 @@
     <ul class="share-options">
         <li class="share-option">
             <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=leonnie.today/2016/04/29/Android/">
-                <i class="fa fa-google-plus"></i><span>Partilhar no Google Plus</span>
+                <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
             <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=leonnie.today/2016/04/29/Android/">
-                <i class="fa fa-facebook-official"></i><span>Partilhar no Facebook</span>
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
             <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=leonnie.today/2016/04/29/Android/">
-                <i class="fa fa-twitter"></i><span>Partilhar no Twitter</span>
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
     </ul>
@@ -439,7 +430,7 @@
             <i class="fa fa-remove"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/author.jpeg" alt="Foto do autor"/>
+            <img id="about-card-picture" src="/assets/images/author.jpeg" alt="Author&#39;s picture"/>
         
             <h4 id="about-card-name">Leon.Nie</h4>
         
@@ -480,7 +471,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">não foram encontrados artigos</div>
+            <div class="no-result text-color-light text-center">no post found</div>
             <div class="results">
                 
                 <div class="media">
@@ -606,10 +597,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="não foram encontrados artigos"
-                data-message-one="1 artigo encontrados"
-                data-message-other="{n} artigos encontrados">
-                6 artigos encontrados
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                6 posts found
             </p>
         </div>
     </div>
