@@ -1,5 +1,5 @@
 My personal blog
 
-Domain : http://leonnie.today
+Domain : http://leonnie.cn
 
 Powered by Hexo
